@@ -316,17 +316,11 @@ body.hovering .cursor-ring {
     opacity: 0.8;
 }
 
-/* Enhanced glow effect for Three.js canvas */
+/* Removing darkened edge overlay */
 #network-canvas::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: radial-gradient(circle at center, transparent 0%, rgba(2, 2, 4, 0.3) 100%);
-    pointer-events: none;
+    display: none;
 }
+
 
 /* ========================================
    CYBER FLOOR
@@ -367,17 +361,11 @@ body.hovering .cursor-ring {
     }
 }
 
-/* Add digital data stream effect in background */
+/* Removing dark overlay from cyber floor */
 .cyber-floor::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: radial-gradient(circle at center, transparent 0%, rgba(2, 2, 4, 0.8) 70%);
-    pointer-events: none;
+    display: none;
 }
+
 
 /* Floating data particles */
 .cyber-floor::after {
@@ -533,7 +521,8 @@ body.hovering .cursor-ring {
     align-items: center;
     justify-content: space-between;
     z-index: 1000;
-    background: linear-gradient(180deg, rgba(2, 2, 4, 0.95) 0%, transparent 100%);
+    background: rgba(10, 10, 20, 0.85); /* Solid transparent background without vertical fade */
+
     backdrop-filter: blur(10px);
 }
 
@@ -1574,8 +1563,9 @@ body.hovering .cursor-ring {
    SKILLS SECTION
    ======================================== */
 .skills-section {
-    background: linear-gradient(180deg, transparent 0%, rgba(0, 240, 255, 0.02) 50%, transparent 100%);
+    background: transparent;
 }
+
 
 .skills-grid {
     display: grid;
